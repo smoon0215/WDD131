@@ -1,0 +1,35 @@
+body{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5
+}
+div{
+    margin: 60px;
+    border: 1px solid black;
+}
+header{
+    text-align: center;
+    border-bottom: 1px solid #006EB6;
+    
+}
+h3{
+    color: #006EB6;
+}
+p{
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: left;
+}
+ol{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+main{
+    padding: 20ps;
+    max-width: 600px;
+}
+img{
+    margin-left: 45%;
+    width: 150px;
+}
+

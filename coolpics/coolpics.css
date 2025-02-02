@@ -42,6 +42,10 @@ footer{
 footer p {
     margin: 0;
 }
+/* nav a {
+    display: block;
+    transition: ease-in-out 0.3s ;
+} */
 
 @media screen and (max-width: 700px){
     .gallery{
@@ -50,11 +54,27 @@ footer p {
     }
 }
 @media screen and (max-width: 500px){
-    nav{
-        
+    .hide{
+        display: none;
+    }
+    .menu-button{
+        cursor: pointer;
     }
     .gallery{
         display: grid;
         grid-template-columns: 1fr;
-    }    
+    }  
+    .viewer{
+        position: fixed;
+        margin: 0;
+        padding: 0;
+
+        background-color: rgba(0, 0, 0, 0.75);
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .viewer img{
+        grid-template-rows: 2;
+        max-height: 100%;
+    }
 }

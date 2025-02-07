@@ -1,0 +1,68 @@
+:root{
+    --primary-color: #E7DECD;
+    --secondary-color: #804E49 ;
+    --accent-color: #6A8EAE ;
+    --text-dark: black ;
+    --text-light: white;
+    --primary-font: Helvetica, Arial, sans-serif;
+    --headding-font: Impact, serif;
+}
+body{
+    background-color: #E7DECD;
+    color: black;
+}
+h1{
+    text-align: center;
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-top: solid #804E49 2px;
+    border-bottom: solid #804E49 2px;
+}
+ul{
+    list-style-type:none ;
+    margin: 0;
+    padding: 10px;
+    grid-column: 2;
+    justify-self: end;
+}
+li{
+    display: inline;
+    justify-items: flex-end;
+}
+li a{
+    padding: 8px;
+}
+main{
+    display: grid;
+    grid-template-columns: 400px 1fr 400px ;
+    grid-template-rows: repeat(2,1fr);
+}
+#one{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 1em;
+    border-left: #804E49 2px solid;
+    margin-bottom: 3em;
+}
+#two{
+    grid-row: 2;
+    grid-column: 2;
+    padding: 1em;
+    border-left: #804E49 2px solid;
+    margin-bottom: 3em;
+}
+#filters{
+    grid-column: 3;
+    grid-row: 1/2;
+    float: right;
+    border: #804E49 solid 2px;
+}
+.bookDetails{
+    grid-column: 1;
+    justify-items: flex-end;
+    padding: 1em;
+}

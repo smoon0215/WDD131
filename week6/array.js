@@ -16,7 +16,7 @@ function convertGradesToPoints(grade){
     }
     return points;
 }
-const gpaPoints = grade.map(convertGradesToPoints);
+const gpaPoints = grades.map(convertGradesToPoints);
 const pointsTotal = gpaPoints.reduce(function (total, item) {
     return total + item
 });

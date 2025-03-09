@@ -1,0 +1,183 @@
+/* Import Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+/* Custom Properties */
+:root {
+  --primary-color: #1B98E0;
+  --secondary-color: #59c3c3;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Amatic SC', sans-serif; 
+}
+
+/* Global Styles */
+body {
+  font-family: var(--primary-font);
+  /* Add other global styles like margin, padding, background color, etc. */
+  background-color: beige;
+}
+
+/* ... (more styles to be added below) */
+
+header {
+    /* Use Flexbox to align logo and site name */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Add padding, background color, etc. as needed */
+}
+  
+header h1 {
+    font-family: var(--secondary-font);
+    /* Add font size, color, margin, etc. */
+    font-size: 9em;
+}
+  
+header img {
+    /* Add width, height, margin, etc. */
+    width: 5em;
+    height: 7em;
+    position: relative;
+    top: -15px;
+}
+
+form {
+    /* Add margin, padding, etc. */
+    display: flex;
+    width: 98%;
+    border-bottom: #333333e2 solid 2px;
+    padding: 1em;
+}
+  
+input[type="text"] {
+    flex-grow: 1;
+    /* Add width, padding, border, etc. */
+}
+button img{
+    width: 3em;
+    height: 3em;
+}
+  
+button{
+    width: 5em;
+    height: 5em;
+}
+
+
+#recipe-container {
+    /* Add margin, padding, etc. */
+    border: #333 solid 2px;
+    border-radius: 1em;
+    margin: 3em;
+
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 1fr;
+    overflow: auto;
+}
+  
+#recipe-container h2 {
+    /* Add font size, color, margin, etc. */
+    color: #59c3c3;
+    font-family: var(--secondary-font);
+    font-size: xx-large;
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    top: 6em;
+    height: 35px;
+}
+  
+#recipe-container img {
+    /* Add width, height, margin, etc. */
+    max-width: 400px; /* Make image responsive */
+    padding: 2em; 
+    grid-column: 1;
+    grid-row: 1;
+}
+  
+#recipe-container p {
+    /* Add font size, color, margin, etc. */
+    display: block;
+    margin: 7px;
+    position: relative;
+    top: 18em;
+    grid-column: 2;
+    grid-row: 1;
+    height: 30px;
+}
+
+
+.tags {
+    /* Add margin, padding, etc. */
+    /* position: relative;
+    left: 4px; */
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    top: 23.5em;
+    height: 20px;
+}
+  
+.tags span {
+    /* Add background color, color, padding, margin, etc. */
+    border: #333 solid 1px;
+    margin: 2px;
+    padding: 2px;
+}
+  
+.rating {
+    /* Add font size, color, margin, etc. */
+    margin: 1em;
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    top: 25em;
+    height: 15px;
+}
+
+
+
+footer {
+    /* Add padding, background color, etc. */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+  
+.social img {
+    /* Add width, height, margin, etc. */
+    width: 7em;
+    height: 7em;
+}
+  
+footer a {
+    /* Add font size, color, etc. */
+    font-size: 0.6em; /* Reduce the font size of the attribution link */
+}
+
+
+/* First breakpoint (around 600px) */
+@media (min-width: 600px) {
+    main {
+      display: flex; 
+      flex-direction: column;
+    }
+
+    #recipe-container p {
+      display: block; 
+    }
+  
+    /* Add more styles for larger screens as needed */
+}
+  
+  /* Second breakpoint (around 960px) */
+@media (min-width: 960px) {
+    main {
+      max-width: 960px; 
+      margin: 0 auto; 
+    }
+  
+    /* Add more styles for even larger screens as needed */
+} 

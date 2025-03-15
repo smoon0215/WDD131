@@ -159,14 +159,36 @@ footer a {
 
 
 /* First breakpoint (around 600px) */
-@media (min-width: 600px) {
+@media (min-width: 400px) {
     main {
       display: flex; 
       flex-direction: column;
     }
 
+    #recipe-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #recipe-container img{
+        height: em;
+        width: em;
+    }
+
+    #recipe-container h2{
+        top: 0;
+    }
+
     #recipe-container p {
-      display: block; 
+        top: -2em
+    }
+
+    .tags{
+        top: 0;
+    } 
+    
+    .rating{
+        top: 0;
     }
   
     /* Add more styles for larger screens as needed */

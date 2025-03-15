@@ -14,7 +14,20 @@ function searchRecipes(query) {
         }
     }
     return results;
+}                                                                        // should be fine up until right here 
+
+function randomNum(num){
+    return Math.floor(Math.random()*5);
 }
+
+function getRandomListEntry(list){
+    const listLength = list.length;
+    const randomNum =  random(listLength);
+    return list[randomNum];
+}
+
+// console.log(getRandomListEntry(recipes))
+
 
 function displayRecipes(recipesToDisplay) {
     const recipeContainer = document.getElementById('recipe-container');
@@ -25,19 +38,22 @@ function displayRecipes(recipesToDisplay) {
         return;
     }
 
+    // Sort recipes alphabetically by name
+    recipesToDisplay.sort((a, b) => a.name.localeCompare(b.name));
+
     recipesToDisplay.forEach(recipe => {
         const recipeHTML = `
-            <div class="recipe-item">
-                <img src="${recipe.image}" alt="${recipe.name}">
-                <h2>${recipe.name}</h2>
-                <p>${recipe.description}</p>
-                <div class="tags">
-                    ${recipe.tags.map(tag => `<span>${tag}</span>`).join('')}
-                </div>
-                <div class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
-                    ${Array(recipe.rating).fill('<span aria-hidden="true" class="icon-star">⭐</span>').join('')}
-                </div>
+            <div id="recipe-container">
+            <img src="${recipe.image}" alt="${recipe.name}">
+            <h2>${recipe.name}</h2>
+            <p>${recipe.description}</p>
+            <div class="tags">
+                ${recipe.tags.map(tag => `<span>${tag}</span>`).join('')} 
             </div>
+            <div class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+                ${'⭐'.repeat(recipe.rating)}${'☆'.repeat(5-recipe.rating)}
+            </div>
+        </div>
         `;
         recipeContainer.innerHTML += recipeHTML;
     });
@@ -49,6 +65,3 @@ document.querySelector('form').addEventListener('submit', function(event) {
     const results = searchRecipes(query);
     displayRecipes(results);
 });
-
-// Initial display of all recipes (optional)
-displayRecipes(recipes);

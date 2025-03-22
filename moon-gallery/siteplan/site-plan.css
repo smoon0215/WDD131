@@ -28,6 +28,11 @@ Fonts are separated by a | */
   --nav-hover-link-color: var(--accent1-color);
 }
 
+.page1{
+  height: 25%;
+  width: 25%;
+}
+
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {

@@ -3,9 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Moon Virutal Galery</title>
+    <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
+    <nav>
+        <p class="nav-text">Moon Virtual Gallery</p> 
+
+        <a class="nav-text" href="index.html">Home</a>
+        <a class="nav-text" href="about.html">About</a>
+    </nav>
     
+    <section aria-label="Image Slide Show" id="hero-container">
+        <div class="hero-image">
+            <ul>
+                <li class="hero-img"><img src="images/red-umbrella.jpg" alt="Red umbrella on a mirrored lake of a dream like sky " ></li>
+                <li class="hero-img"><img src="images/rolling-hills.jpg" alt="" ></li>
+                <li class="hero-img"><img src="images/ranbow-tree.jpg" alt="" ></li>
+                <li class="hero-img"><img src="images/large-temple.jpg" alt="" ></li>
+            </ul>    
+        </div>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.hero-img');
+
+        function changeImage() {
+            images.forEach((img, index) => {
+                img.classList.remove('active');  // Remove 'active' class from all images
+            });
+
+            // Add 'active' class to the current image
+            images[currentIndex].classList.add('active');
+
+            // Update currentIndex to the next image
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // Initially display the first image
+        changeImage();
+
+        // Change the image every 8 seconds
+        setInterval(changeImage, 8000);
+    </script>
+
+    <main>
+
+        <p id="headerQuote">"Art and love are the same thing: It's the process of seeing yourself in things that are not you" - Chuck Klosterman</p>
+
+        
+        <section id="gallery-container">
+            <h1>Gallery</h1>
+            <div class="gallery">
+                <img class="galleryImg" src="images/abstract-faces.jpg" alt="A whisper of a face emerges against a backdrop of soft, organic color fields.">
+                <h2 class="Title">Partnership</h2>
+                <h3 class="Medium">Medium - Acrylic on canvas</h3>
+                <p class="desc">Dreamlike composition blending organic forms with the fragility of a single line portrait.</p> <!-- Expression and interpretation-->
+                <!-- or <p>Mixed media exploration of form and line, featuring a delicate contour drawing on textured canvas</p>   Technique and style -->
+            </div>
+
+            <div class="gallery">
+                <img class="galleryImg" src="images/camp.jpg" alt="A low-angle shot, framing the sky with the dark shapes of the forest canopy.">
+                <h2 class="Title">Looking Heavenward</h2>
+                <h3 class="Medium">Photograph</h3>
+                <p class="desc">A low-angle shot, framing the sky with the dark, organic shapes of the forest canopy.</p>
+                <!-- <p>A serene moment captured, with soft clouds drifting across a clear blue sky, framed by the stark outlines of trees.</p> -->
+            </div>
+
+            <div class="gallery">
+                <img class="galleryImg" src="images/lanterns.jpg" alt="A solitary lamppost with vibrant flowers, stands against a warm, muted backdrop.">
+                <h2 class="Title">French Idiology</h2>
+                <h3 class="Medium">Medium - Oil on canvas</h3>
+                <p class="desc">Floral adornment on a vintage lamppost, painted with a soft, atmospheric touch.</p>
+                <!-- <p>Painted study of light and form, focusing on a lamppost and its floral embellishment</p> -->
+            </div>
+
+            <div class="gallery">
+                <img class="galleryImg" src="images/oregon-coast.JPG" alt="A coastal panorama, capturing the rugged textures of tide pools against the vast expanse of the ocean and sky.">
+                <h2 class="Title">Perception</h2>
+                <h3 class="Medium">Photograph</h3>
+                <p class="desc">A moment captured at the edge of the sea, where the raw beauty of the natural world is on full display.</p>
+                <!-- <p>A coastal panorama, capturing the rugged textures of tide pools against the vast expanse of the ocean and sky.</p> -->
+            </div>
+
+            <div class="gallery">
+                <img class="galleryImg" src="images/large-temple.jpg" alt="Underpainting for a religious temple">
+                <h2 class="Title">Oakland Temple - In Progress</h2>
+                <h3 class="Medium">Medium - Acrylic on canvas</h3>
+                <p class="desc">Underpainting for a religious temple, showing the initial stages of form and color development.</p>
+            </div>
+
+            <div class="gallery">
+                <img class="galleryImg" src="images/oregon-trees.jpg" alt="Sunlight bursts through the redwood canopy, illuminating the vibrant ferns and the textured bark.">
+                <h2 class="Title">Morning Glory</h2>
+                <h3 class="Medium">Photograph</h3>
+                <p class="desc">A glimpse into the heart of a redwood ecosystem, showcasing the symbiotic relationship between towering trees and flourishing undergrowth.</p>
+            </div>
+
+        </section>
+
+        <section id="inspiration">
+            <h1>Inspiration</h1>
+            <p>Art, to me, is a form of expression, a window into the depths of the human soul. It offers a unique perspective on the world, and each piece is a personal interpretation, a visual exploration of my surroundings. 
+                I am particularly drawn to the challenge of capturing fleeting moments in time, striving to convey the emotions felt within those very instances.
+                My artistic journey was ignited by Michael Mahoney. 
+                His artistic abilities, coupled with his patience in occasionally guiding me, fostered a deep love and fascination for the artistic world. I am profoundly grateful for his influence, as well as the support of every family member who has contributed to my growth. 
+                Ultimately, my goal extends beyond simply developing and refining my skills. I aim to inspire viewers to experience the world with a renewed sense of wonder, as if seeing it's beauty for the first time.
+            </p>
+            <img class="inspritationImg" src="images/Mikey.jpg" alt="">
+        </section>
+    </main>
+
+    <footer>
+        <p>Moon Virtual Gallery</p>
+        
+        <a class="footerNav"  href="index.html">Home</a>
+        <a class="footerNav" href="about.html">About</a>
+
+        <a class="socials" href="https://www.facebook.com/share/1FNFHHxBRk/" target="_blank"><img src="images/facebook-icon.png" alt="Facebook icon"></a>
+        <a class="socials" href="https://www.linkedin.com/in/samantha-moon-35b54b206/" target="_blank"><img src="images/linkedin-icon.png" alt="Linkedin icon"></a>
+        <a class="socials" href="https://www.instagram.com/moon_virtualgallery/" target="_blank"><img src="images/insta-icon.png" alt="Instagram icon"></a>
+    </footer>
 </body>
 </html>

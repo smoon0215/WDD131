@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Virutal Galery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <nav>
+        <p class="nav-text">Moon Virtual Gallery</p> 
+
+        <a class="nav-text" href="index.html">Home</a>
+        <a class="nav-text" href="about.html">About</a>
+    </nav>
+    <main id="page2">
+        <section id="about-me">
+            <h1>About Me </h1>
+            <p>Hello! I’m Samantha Moon, an artist based in Idaho and a student of Computer Science at Brigham Young University – Idaho. 
+                My artwork is an ongoing journey of exploration, where I experiment with various techniques and styles, 
+                drawing inspiration from both intuition and traditional artistic methods.</p>
+                <p> While I typically work with acrylic on canvas and occasionally oils, 
+                I find myself captivated by the beauty of both nature and man-made structures. 
+                Each piece in this portfolio reflects my desire to express complex emotions and stories beyond words, 
+                capturing moments of connection and insight through visual art.</p> 
+        </sction>
+
+        <img class="headshot" src="images/headshot.JPG" alt="Headshot of me ">
+
+        <!-- This is going to need some extra work so don't forget about it -->
+        <section id="contact-form">      
+            <h1>Contact me!</h1>
+
+            <form id="contactForm" method="POST"  action="https://formspree.io/f/xblgzkqw">
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <span id="firstNameError" class="error"></span>
+                </div>
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <span id="lastNameError" class="error"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="emailError" class="error"></span>
+                </div>
+                <div>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <span id="messageError" class="error"></span>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Moon Virtual Gallery</p>
+        
+        <a class="footerNav"  href="index.html">Home</a>
+        <a class="footerNav" href="about.html">About</a>
+
+        <a class="socials" href="https://www.facebook.com/share/1FNFHHxBRk/" target="_blank"><img src="images/facebook-icon.png" alt="Facebook icon"></a>
+        <a class="socials" href="https://www.linkedin.com/in/samantha-moon-35b54b206/" target="_blank"><img src="images/linkedin-icon.png" alt="Linkedin icon"></a>
+        <a class="socials" href="https://www.instagram.com/moon_virtualgallery/" target="_blank"><img src="images/insta-icon.png" alt="Instagram icon"></a>
+    </footer>
+</body>
+</html>

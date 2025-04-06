@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon Virutal Galery</title>
     <link rel="stylesheet" href="gallery.css">
+
+    <link rel="icon" href="images/moon-logo.png" type="image/x-icon">
+
+    <meta property="og:title" content="Page Title">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Page Description">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <nav>
@@ -55,6 +64,22 @@
         
         <section id="gallery-container">
             <h1>Gallery</h1>
+            <div id="year-dropdown-container">
+                <p>	&#xf0d7;</p>
+                <select id="yearSelect">
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
             <div class="gallery">
                 <img class="galleryImg" src="images/abstract-faces.jpg" alt="A whisper of a face emerges against a backdrop of soft, organic color fields.">
                 <h2 class="Title">Partnership</h2>
@@ -125,5 +150,7 @@
         <a class="socials" href="https://www.linkedin.com/in/samantha-moon-35b54b206/" target="_blank"><img src="images/linkedin-icon.png" alt="Linkedin icon"></a>
         <a class="socials" href="https://www.instagram.com/moon_virtualgallery/" target="_blank"><img src="images/insta-icon.png" alt="Instagram icon"></a>
     </footer>
+
+    <script src="main.js" type="module" defer></script>
 </body>
 </html>
